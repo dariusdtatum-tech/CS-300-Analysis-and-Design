@@ -50,17 +50,21 @@ I built a terminal-based menu system with built-in input validation so that the 
 ## CS 300 Data Structures and Algorithms Reflection
 
 1. What was the problem you were solving in the projects for this course?
+
 The problem was designing an academic course advisor program that could read a file containing a list of computer science courses, store that data along with any prerequisites, and let a user interact with it. The program needed to be fast and efficient, allowing an advisor to search for a specific course instantly or print a complete list of all courses in alphanumeric order.
 
 2. How did you approach the problem? Consider why data structures are important to understand.
+
 I approached the problem by looking at how different data structures handle search times and memory usage. Understanding data structures is incredibly important because choosing the wrong one can slow a program down as more data is added. For example, using a Vector is easy to set up, but searching it requires looking through every single item one by one, which is an O(N) linear time complexity. To make the program faster, I focused on implementing a Binary Search Tree (BST). Because a BST organizes data hierarchically, it cuts down the average search and insertion time to O(log N), and it allows for an easy in-order traversal to print the courses alphabetically.
 
 3. How did you overcome any roadblocks you encountered while going through the activities or project?
+
 My biggest roadblocks were managing pointers correctly and dealing with complex conditional logic, especially when handling node deletions in the Binary Search Tree or parsing file data that had varying numbers of prerequisites. When working with recursion, it was easy to lose track of where pointers were pointing, which could cause memory leaks or segementation faults. I overcame these challenges by breaking down the logic, using manual print statements to trace the flow of data through the loops, and carefully checking that my pointers were properly updated when deleting or moving nodes.
 
 4. How was your work on this project expanded your approach to designing software and developing programs?
+
 This project taught me not to just jump straight into writing code the moment I get an assignment. Instead, it has shown me the value of planning the software design first. I now spend time analyzing data requirements and thinking about scalability from the start. Using Big-O notation to evaluate my code has changed how I think, and I now always look for ways to optimize my algorithms so they can handle large datasets without lagging.
 
 5. How has your work on this project evolved the way you write programs that are maintainable, readable, and adaptable?
-It has made me focus a lot more on writing clean, modular code. Instead of grouping all my logic into one massive function, I separate things--like putting the file-parsing logic, the core data structure algorithms, and the user interface menus into distinct functions. I also focus on using descriptive variable names and adding meaningful comments. This makes the program much easier to maintain, meaning if I ever need to swap out the Binary Search Tree for a Hash Table in the future, I can do it without having to rewrite the entire user interface.
 
+It has made me focus a lot more on writing clean, modular code. Instead of grouping all my logic into one massive function, I separate things--like putting the file-parsing logic, the core data structure algorithms, and the user interface menus into distinct functions. I also focus on using descriptive variable names and adding meaningful comments. This makes the program much easier to maintain, meaning if I ever need to swap out the Binary Search Tree for a Hash Table in the future, I can do it without having to rewrite the entire user interface.
